@@ -1,0 +1,26 @@
+@for $i from 1 through 3 {
+  .bt-#{$i} {
+    border-top: #{$i}px solid $gray-300;
+  }
+  .bl-#{$i} {
+    border-left: #{$i}px solid $gray-300;
+  }
+  .br-#{$i} {
+    border-right: #{$i}px solid $gray-300;
+  }
+  .bb-#{$i} {
+    border-bottom: #{$i}px solid $gray-300;
+  }
+  .bx-#{$i} {
+    @extend .bl-#{$i};
+    @extend .br-#{$i};
+  }
+  .by-#{$i} {
+    @extend .bt-#{$i};
+    @extend .bb-#{$i};
+  }
+  .b-#{$i} {
+    @extend .by-#{$i};
+    @extend .bx-#{$i};
+  }
+}

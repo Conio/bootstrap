@@ -1,0 +1,21 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+//
+// Color system
+//
+
+$conio-hot-pink: #ee65a1 !default;
+$conio-yellow: #ffe302 !default;
+$conio-acid-green: #a1cc3d !default;
+$conio-medium-sea-green: #63c289 !default;
+$conio-watermelon: #f36 !default;
+$conio-turquoise: #3cc !default;
+
+// Sloop
+//
+// Configure sloop defaults
+$sloop-angle: 3deg !default;
+$sloop-margin: 5.5% !default;

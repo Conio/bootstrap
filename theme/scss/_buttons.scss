@@ -1,0 +1,17 @@
+// scss-lint:disable QualifyingElement
+//
+// Base styles
+//
+.btn {
+  @extend .text-uppercase;
+  @extend .gilroy-extra-bold;
+  @extend .spaced-letters;
+}
+
+.btn-primary {
+  @include button-variant-conio($white, $conio-watermelon, $conio-watermelon);
+}
+
+.btn-secondary {
+  @include button-variant-conio($conio-watermelon, $white, $gray-300);
+}

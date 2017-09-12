@@ -1,0 +1,39 @@
+.bg-diagonal-bottom {
+  @include diagonal-background(after);
+}
+
+.bg-diagonal-bottom-reverse {
+  @include diagonal-background(after, true);
+}
+
+.bg-diagonal-top {
+  @include diagonal-background(before);
+}
+
+.bg-diagonal-top-reverse {
+  @include diagonal-background(before, true);
+}
+
+.bg-diagonal-both {
+  @include diagonal-background(both);
+}
+
+.bg-diagonal-both-reverse {
+  @include diagonal-background(both, true);
+}
+
+.bg-conio-watermelon {
+  background: $conio-watermelon;
+}
+
+.bg-conio-turquoise {
+  background: $conio-turquoise;
+}
+
+.bg-conio-medium-sea-green {
+  background: $conio-medium-sea-green;
+}
+
+.bg-conio-yellow {
+  background: $conio-yellow;
+}

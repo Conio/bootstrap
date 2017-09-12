@@ -1,0 +1,58 @@
+// Text color
+.text-conio-hot-pink {
+  color: $conio-hot-pink;
+}
+.text-conio-yellow {
+  color: $conio-yellow;
+}
+.text-conio-acid-green {
+  color: $conio-acid-green;
+}
+.text-conio-medium-sea-green {
+  color: $conio-medium-sea-green;
+}
+.text-conio-watermelon {
+  color: $conio-watermelon;
+}
+.text-conio-turquoise {
+  color: $conio-turquoise;
+}
+.text-white {
+  color: $white;
+}
+.text-black {
+  color: $black;
+}
+
+// Letter spacing modifier
+.spaced-letters {
+  letter-spacing: .1em;
+}
+
+// Size Modifiers
+.big-lead {
+  font-size: 2.1875rem;
+  @extend .gilroy-medium;
+}
+
+// Font Families
+.gilroy-extra-bold {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+}
+
+.gilroy-medium {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+}
+
+.gilroy-regular {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
+// Basic markup
+strong {
+  @extend .gilroy-extra-bold;
+  @extend .text-black;
+}
