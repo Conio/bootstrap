@@ -22,4 +22,21 @@
       justify-content: flex-end;
     }
   }
+
+  .navbar-toggler {
+
+    >span {
+      display: inline-block;
+      // hide text if parent doesn't have collapsed class
+      opacity: 0;
+      transition: all .3s ease-out;
+      transform: translateX(-20px);
+      will-change: opacity, transform;
+    }
+
+    &.collapsed>span {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
