@@ -1,0 +1,25 @@
+.navbar.navbar-conio {
+  display: flex;
+  justify-content: space-between;
+  color: $black inherit;
+
+  &.negative {
+    color: $white;
+  }
+
+  .navbar-brand {
+    color: inherit;
+  }
+
+  .navbar-collapse .navbar-nav {
+    color: inherit;
+    &.left {
+      align-self: flex-start;
+    }
+    &.right {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+}
