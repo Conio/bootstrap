@@ -8,23 +8,11 @@
   }
 
   .navbar-brand {
+    z-index: 2;
     color: inherit;
-  }
-
-  .navbar-collapse .navbar-nav {
-    color: inherit;
-    &.left {
-      align-self: flex-start;
-    }
-    &.right {
-      display: flex;
-      flex-grow: 1;
-      justify-content: flex-end;
-    }
   }
 
   .navbar-toggler {
-
     >span {
       display: inline-block;
       // hide text if parent doesn't have collapsed class
@@ -37,6 +25,77 @@
     &.collapsed>span {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+
+  .navbar-nav {
+    color: inherit;
+  }
+
+  .nav-link {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .nav-icons>:nth-child(n) {
+    padding: 0 2.5px;
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &.navbar-expand#{$infix} .navbar-collapse {
+
+      @include media-breakpoint-down($breakpoint) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        padding-left: 28px;
+        background-color: inherit;
+        transition: transform .3s cubic-bezier(0, .71, .41, 1);
+        transform: translateX(100%);
+        will-change: transform;
+
+        &.show {
+          transform: translateX(0);
+        }
+
+        .navbar-nav {
+          font-weight: 700;
+          line-height: 1.33;
+
+          &.left {
+            font-size: 3rem;
+          }
+          &.right {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      @include media-breakpoint-up($next) {
+        .navbar-nav {
+          &.left {
+            justify-content: flex-start;
+          }
+          &.right {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            align-content: center;
+          }
+        }
+      }
     }
   }
 }
