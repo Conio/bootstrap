@@ -133,6 +133,8 @@
     "js/**/*.js",
     ".scss-lint.yml",
     "scss/**/*.scss",
+    "theme/js/**/*.js",
+    "theme/scss/**/*.js",
     "LICENSE"
   ],
   "jspm": {
