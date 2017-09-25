@@ -6,8 +6,8 @@
   &.negative {
     color: $white;
 
-    .nav-item.active .nav-link::after {
-      background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center;
+    .navbar-nav .nav-item.active .nav-link::after {
+      background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center !important;
     }
   }
 
@@ -34,21 +34,6 @@
 
   .navbar-nav {
     color: inherit;
-  }
-
-  .nav-item {
-
-    &.active .nav-link::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 101%;
-      height: 5px;
-      content: " ";
-
-      background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
-      background-size: cover;
-    }
 
     .nav-link {
       position: relative; // need this to let ::after decoration work
@@ -101,6 +86,10 @@
             font-size: 2rem;
           }
         }
+
+        .nav-item .nav-link {
+          padding: 0;
+        }
       }
 
       @include media-breakpoint-up($next) {
@@ -114,6 +103,17 @@
             justify-content: flex-end;
             align-content: center;
           }
+        }
+
+        .nav-item.active .nav-link::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 101%;
+          height: 5px;
+          content: " ";
+          background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+          background-size: cover;
         }
       }
     }
