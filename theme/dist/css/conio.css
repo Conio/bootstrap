@@ -87,9 +87,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.1;
   color: inherit;
 }
@@ -544,7 +544,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
@@ -4970,7 +4970,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -5084,7 +5084,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Gilroy", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -8541,13 +8541,17 @@ body {
   color: #fff;
 }
 
-.navbar.navbar-conio.negative .nav-item.active .nav-link::after {
-  background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center;
+.navbar.navbar-conio.negative .navbar-nav .nav-item.active .nav-link::after {
+  background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center !important;
 }
 
 .navbar.navbar-conio .navbar-brand {
-  z-index: 2;
+  z-index: 1050;
   color: inherit;
+}
+
+.navbar.navbar-conio .navbar-toggler {
+  z-index: 1050;
 }
 
 .navbar.navbar-conio .navbar-toggler > span {
@@ -8569,18 +8573,7 @@ body {
   color: inherit;
 }
 
-.navbar.navbar-conio .nav-item.active .nav-link::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 101%;
-  height: 5px;
-  content: " ";
-  background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
-  background-size: cover;
-}
-
-.navbar.navbar-conio .nav-item .nav-link {
+.navbar.navbar-conio .navbar-nav .nav-link {
   position: relative;
   color: inherit;
   text-decoration: none;
@@ -8596,6 +8589,7 @@ body {
     top: 0;
     right: 0;
     left: auto;
+    z-index: 1040;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -8631,6 +8625,9 @@ body {
   .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .navbar-nav.right {
     font-size: 2rem;
   }
+  .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item .nav-link {
+    padding: 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -8648,6 +8645,16 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item.active .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    height: 5px;
+    content: " ";
+    background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 767px) {
@@ -8656,6 +8663,7 @@ body {
     top: 0;
     right: 0;
     left: auto;
+    z-index: 1040;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -8691,6 +8699,9 @@ body {
   .navbar.navbar-conio.navbar-expand-md .navbar-collapse .navbar-nav.right {
     font-size: 2rem;
   }
+  .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item .nav-link {
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -8708,6 +8719,16 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item.active .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    height: 5px;
+    content: " ";
+    background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 991px) {
@@ -8716,6 +8737,7 @@ body {
     top: 0;
     right: 0;
     left: auto;
+    z-index: 1040;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -8751,6 +8773,9 @@ body {
   .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .navbar-nav.right {
     font-size: 2rem;
   }
+  .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item .nav-link {
+    padding: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -8768,6 +8793,16 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item.active .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    height: 5px;
+    content: " ";
+    background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -8776,6 +8811,7 @@ body {
     top: 0;
     right: 0;
     left: auto;
+    z-index: 1040;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -8811,6 +8847,9 @@ body {
   .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .navbar-nav.right {
     font-size: 2rem;
   }
+  .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item .nav-link {
+    padding: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -8828,6 +8867,16 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item.active .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    height: 5px;
+    content: " ";
+    background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
 .navbar.navbar-conio.navbar-expand .navbar-collapse {
@@ -8835,6 +8884,7 @@ body {
   top: 0;
   right: 0;
   left: auto;
+  z-index: 1040;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -8875,6 +8925,10 @@ body {
   font-size: 2rem;
 }
 
+.navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item .nav-link {
+  padding: 0;
+}
+
 .navbar.navbar-conio.navbar-expand .navbar-collapse .navbar-nav.left {
   -ms-flex-pack: start;
       justify-content: flex-start;
@@ -8889,6 +8943,17 @@ body {
       justify-content: flex-end;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item.active .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 101%;
+  height: 5px;
+  content: " ";
+  background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+  background-size: cover;
 }
 
 .hamburger {

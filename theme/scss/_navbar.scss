@@ -12,11 +12,12 @@
   }
 
   .navbar-brand {
-    z-index: 2;
+    z-index: $zindex-modal;
     color: inherit;
   }
 
   .navbar-toggler {
+    z-index: $zindex-modal;
     >span {
       display: inline-block;
       // hide text if parent doesn't have collapsed class
@@ -57,6 +58,7 @@
         top: 0;
         right: 0;
         left: auto;
+        z-index: $zindex-modal-backdrop;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
