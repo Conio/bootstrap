@@ -8,6 +8,8 @@
 
 @import "../../scss/functions";
 @import "../../scss/variables";
+@import "custom";
+
 @import "../../scss/mixins";
 @import "../../scss/print";
 @import "../../scss/reboot";
@@ -41,7 +43,6 @@
 @import "../../scss/carousel";
 @import "../../scss/utilities"; 
 
-@import "custom";
 @import "mixins";
 @import "base";
 @import "background";
