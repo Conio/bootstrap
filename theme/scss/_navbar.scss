@@ -6,7 +6,7 @@
   &.negative {
     color: $white;
 
-    .navbar-nav .nav-item.active .nav-link::after {
+    .navbar-nav .nav-item .nav-link::after {
       background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center !important;
     }
   }
@@ -107,15 +107,26 @@
           }
         }
 
-        .nav-item.active .nav-link::after {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 101%;
-          height: 5px;
-          content: " ";
-          background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
-          background-size: cover;
+        .nav-item {
+
+          .nav-link::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            content: " ";
+            background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
+            background-size: cover;
+            transition: width .2s cubic-bezier(0, .71, .41, 1);
+            will-change: width;
+          }
+
+          &.active, &:hover {
+            .nav-link::after {
+              width: 101%;
+            }
+          }
         }
       }
     }
