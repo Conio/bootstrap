@@ -982,7 +982,7 @@ pre code {
     -ms-flex-order: 12;
         order: 12;
   }
-  .offset-sm-0 {
+  .offset-sm-0, .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .navbar-nav {
     margin-left: 0%;
   }
   .offset-sm-1 {
@@ -1142,7 +1142,7 @@ pre code {
     -ms-flex-order: 12;
         order: 12;
   }
-  .offset-md-0 {
+  .offset-md-0, .navbar.navbar-conio.navbar-expand-md .navbar-collapse .navbar-nav {
     margin-left: 0%;
   }
   .offset-md-1 {
@@ -1302,7 +1302,7 @@ pre code {
     -ms-flex-order: 12;
         order: 12;
   }
-  .offset-lg-0 {
+  .offset-lg-0, .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .navbar-nav {
     margin-left: 0%;
   }
   .offset-lg-1 {
@@ -1462,7 +1462,7 @@ pre code {
     -ms-flex-order: 12;
         order: 12;
   }
-  .offset-xl-0 {
+  .offset-xl-0, .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .navbar-nav {
     margin-left: 0%;
   }
   .offset-xl-1 {
@@ -8541,7 +8541,7 @@ body {
   color: #fff;
 }
 
-.navbar.navbar-conio.negative .navbar-nav .nav-item.active .nav-link::after {
+.navbar.navbar-conio.negative .navbar-nav .nav-item .nav-link::after {
   background: url("https://www.conio.com/assets/images/active--yellow.svg") no-repeat center center !important;
 }
 
@@ -8602,7 +8602,6 @@ body {
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 50px;
-    padding-left: 28px;
     background-color: inherit;
     transition: -webkit-transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
     transition: transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
@@ -8645,15 +8644,20 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item.active .nav-link::after {
+  .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item .nav-link::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 101%;
+    width: 0;
     height: 5px;
     content: " ";
     background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
     background-size: cover;
+    transition: width 0.2s cubic-bezier(0, 0.71, 0.41, 1);
+    will-change: width;
+  }
+  .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item.active .nav-link::after, .navbar.navbar-conio.navbar-expand-sm .navbar-collapse .nav-item:hover .nav-link::after {
+    width: 101%;
   }
 }
 
@@ -8676,7 +8680,6 @@ body {
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 50px;
-    padding-left: 28px;
     background-color: inherit;
     transition: -webkit-transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
     transition: transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
@@ -8719,15 +8722,20 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item.active .nav-link::after {
+  .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item .nav-link::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 101%;
+    width: 0;
     height: 5px;
     content: " ";
     background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
     background-size: cover;
+    transition: width 0.2s cubic-bezier(0, 0.71, 0.41, 1);
+    will-change: width;
+  }
+  .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item.active .nav-link::after, .navbar.navbar-conio.navbar-expand-md .navbar-collapse .nav-item:hover .nav-link::after {
+    width: 101%;
   }
 }
 
@@ -8750,7 +8758,6 @@ body {
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 50px;
-    padding-left: 28px;
     background-color: inherit;
     transition: -webkit-transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
     transition: transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
@@ -8793,15 +8800,20 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item.active .nav-link::after {
+  .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item .nav-link::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 101%;
+    width: 0;
     height: 5px;
     content: " ";
     background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
     background-size: cover;
+    transition: width 0.2s cubic-bezier(0, 0.71, 0.41, 1);
+    will-change: width;
+  }
+  .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item.active .nav-link::after, .navbar.navbar-conio.navbar-expand-lg .navbar-collapse .nav-item:hover .nav-link::after {
+    width: 101%;
   }
 }
 
@@ -8824,7 +8836,6 @@ body {
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 50px;
-    padding-left: 28px;
     background-color: inherit;
     transition: -webkit-transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
     transition: transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
@@ -8867,15 +8878,20 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item.active .nav-link::after {
+  .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item .nav-link::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 101%;
+    width: 0;
     height: 5px;
     content: " ";
     background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
     background-size: cover;
+    transition: width 0.2s cubic-bezier(0, 0.71, 0.41, 1);
+    will-change: width;
+  }
+  .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item.active .nav-link::after, .navbar.navbar-conio.navbar-expand-xl .navbar-collapse .nav-item:hover .nav-link::after {
+    width: 101%;
   }
 }
 
@@ -8897,7 +8913,6 @@ body {
   height: 100vh;
   padding-top: 100px;
   padding-bottom: 50px;
-  padding-left: 28px;
   background-color: inherit;
   transition: -webkit-transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
   transition: transform 0.3s cubic-bezier(0, 0.71, 0.41, 1);
@@ -8945,15 +8960,21 @@ body {
       align-content: center;
 }
 
-.navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item.active .nav-link::after {
+.navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item .nav-link::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 101%;
+  width: 0;
   height: 5px;
   content: " ";
   background: url("https://www.conio.com/assets/images/active.svg") no-repeat center center;
   background-size: cover;
+  transition: width 0.2s cubic-bezier(0, 0.71, 0.41, 1);
+  will-change: width;
+}
+
+.navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item.active .nav-link::after, .navbar.navbar-conio.navbar-expand .navbar-collapse .nav-item:hover .nav-link::after {
+  width: 101%;
 }
 
 .hamburger {

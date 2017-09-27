@@ -53,6 +53,12 @@
 
     &.navbar-expand#{$infix} .navbar-collapse {
 
+      .navbar-nav {
+        @if $infix != "" {
+          @extend .offset#{$infix}-0;
+        }
+      }
+
       @include media-breakpoint-down($breakpoint) {
         position: fixed;
         top: 0;
